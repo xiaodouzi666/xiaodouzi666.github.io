@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Junjun Liu</title>
+  <meta name="description" content="Junjun Liu — AI systems, distributed training and inference, and applied machine learning. Research, projects, publications, and experience.">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b3557'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='white'%3EJL%3C/text%3E%3C/svg%3E">
+  <style>
+    :root { --ink:#20252b; --muted:#626b75; --blue:#225a91; --line:#e0e5ea; }
+    * { box-sizing:border-box; }
+    html { scroll-padding-top:24px; }
+    body { margin:0; background:#fff; color:var(--ink); font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+    main { width:min(880px,calc(100% - 48px)); margin:0 auto; padding:68px 0 34px; }
+    a { color:var(--blue); text-decoration:none; text-underline-offset:4px; }
+    a:hover { text-decoration:underline; }
+    a:focus-visible { outline:2px solid var(--blue); outline-offset:5px; border-radius:2px; }
+    .skip { position:absolute; top:-80px; left:20px; padding:8px 14px; background:#fff; z-index:2; }
+    .skip:focus { top:12px; }
+    h1 { font:500 clamp(2.45rem,6vw,3.25rem)/1.15 Georgia,"Times New Roman",serif; letter-spacing:-.035em; margin:0 0 13px; }
+    .subtitle { margin:0 0 15px; color:var(--muted); font-size:17px; }
+    .links { display:flex; flex-wrap:wrap; gap:8px 22px; font-size:15px; }
+    nav { display:flex; flex-wrap:wrap; gap:7px 23px; padding:24px 0 20px; margin-top:16px; border-bottom:1px solid var(--line); font-size:15px; }
+    nav a { color:var(--muted); }
+    section { margin-top:38px; scroll-margin-top:24px; }
+    h2 { font:500 1.6rem/1.3 Georgia,"Times New Roman",serif; letter-spacing:-.018em; margin:0 0 20px; }
+    h3 { font-size:1rem; line-height:1.55; margin:0; font-weight:650; }
+    p { margin:8px 0; }
+    article { margin:0 0 24px; }
+    article:last-child { margin-bottom:0; }
+    .entry-head { display:flex; align-items:baseline; justify-content:space-between; gap:6px 22px; }
+    .date { flex-shrink:0; color:var(--muted); font-size:14px; }
+    .meta { color:var(--muted); margin:3px 0 6px; font-size:14px; }
+    .entry-links { display:flex; flex-wrap:wrap; gap:6px 20px; font-size:14px; margin-top:7px; }
+    .current { border-left:2px solid var(--blue); padding-left:19px; }
+    .section-rule { border-top:1px solid var(--line); padding-top:31px; }
+    .publication h3 { font-weight:650; max-width:720px; }
+    .publication p { margin:6px 0; }
+    .awards { list-style:none; padding:0; margin:0; }
+    .awards li { display:grid; grid-template-columns:46px 1fr; gap:14px; margin:11px 0; }
+    .awards time { color:var(--muted); font-size:14px; padding-top:2px; }
+    .minor-heading { margin-top:24px; margin-bottom:8px; }
+    footer { border-top:1px solid var(--line); margin-top:42px; padding-top:20px; color:var(--muted); font-size:14px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; }
+    @media (max-width:600px) {
+      main { width:calc(100% - 36px); padding-top:38px; }
+      nav { gap:8px 18px; }
+      .entry-head { flex-direction:column; gap:0; }
+      section { margin-top:32px; }
+      .current { padding-left:14px; }
+    }
+    @media print { main { width:100%; padding:0; } nav,.skip,footer { display:none; } a { color:inherit; } article { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+  <main>
+    <header>
+      <h1>Junjun Liu</h1>
+      <p class="subtitle">AI systems &amp; applied machine learning</p>
+      <div class="links" aria-label="Contact and profiles">
+        <a href="mailto:liu.junju@northeastern.edu">Email</a>
+        <a href="https://github.com/xiaodouzi666">GitHub</a>
+        <a href="https://www.linkedin.com/in/junjunliu-frank/">LinkedIn</a>
+        <a href="https://openi.pcl.ac.cn/JunJun-Liu">OpenI</a>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Research &amp; Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
+      </nav>
+    </header>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>I work on reliable AI systems, distributed training and inference, and tools for machine learning research. I am currently interning at <strong>KVCache.AI</strong>, contributing to <a href="https://github.com/kvcache-ai/Mooncake">Mooncake</a>.</p>
+      <p>My projects span automated paper reproduction, privacy evaluation, gradient monitoring, and machine learning for molecular design. I enjoy connecting research ideas with working systems.</p>
+    </section>
+
+    <section id="experience" class="section-rule" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <article class="current">
+        <div class="entry-head"><h3>KVCache.AI · Mooncake</h3><span class="date">Current</span></div>
+        <p class="meta">Intern · AI systems</p>
+        <p>Contributing to Mooncake's transfer engine, with a focus on RDMA notification reliability and fault tolerance. My work explores endpoint lifecycle handling, control-plane fallback, and notification delivery under failures.</p>
+        <div class="entry-links"><a href="https://github.com/kvcache-ai/Mooncake">Mooncake</a><a href="https://github.com/kvcache-ai/Mooncake/issues/4061">Notification fault-tolerance RFC</a></div>
+      </article>
+      <article>
+        <div class="entry-head"><h3>FlagScale</h3><span class="date">2026</span></div>
+        <p class="meta">Software Engineering Intern · Remote</p>
+        <p>Worked on fault tolerance and observability for distributed training, including straggler detection, in-process restart support, and structured training-health monitoring.</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>MetaX</h3><span class="date">2026</span></div>
+        <p class="meta">Project Contributor · Remote</p>
+        <p>Worked on AI compiler subgraph optimization, including pattern matching, graph rewriting, backend-compatible execution, and correctness and latency profiling.</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>Shanghai Media Group</h3><span class="date">Jun–Aug 2022</span></div>
+        <p class="meta">Machine Learning Engineer · IT Department</p>
+        <p>Built real-time models for interactive virtual environments, combining lightweight visual feature extraction, temporal gesture recognition, and multi-person detection.</p>
+      </article>
+    </section>
+
+    <section id="projects" class="section-rule" aria-labelledby="projects-title">
+      <h2 id="projects-title">Research &amp; Projects</h2>
+      <article>
+        <div class="entry-head"><h3>Automated Research-Paper Reproduction</h3><span class="date">May 2026</span></div>
+        <p class="meta">Bohrium “Light Chaser” Paper-Reproduction Sprint · 2nd place</p>
+        <p>Built an agent harness connecting PDF parsing, method extraction, code generation, environment setup, execution, and iterative debugging. Compared reproduced metrics with reported results and generated structured reproduction reports.</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>Multimodal Privacy-Risk Meter</h3><span class="date">Aug–Dec 2025</span></div>
+        <p class="meta">Researcher · University of Groningen</p>
+        <p>Developed FastAPI infrastructure for privacy-risk evaluation across text, image, audio, and video. Integrated modular attack simulations and cross-modal inference with downloadable evaluation reports.</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>ColossalAI Monitor</h3><span class="date">Mar–May 2025</span></div>
+        <p class="meta">Team Leader · Distributed gradient monitoring</p>
+        <p>Designed non-intrusive PyTorch autograd hooks to capture per-parameter gradient statistics in ColossalAI and PyTorch DDP. Compared local and global gradients around AllReduce and exported structured records for analysis.</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>Inverse Design of Cell-Penetrating Amphiphiles</h3><span class="date">Oct 2024–Apr 2025</span></div>
+        <p class="meta">Robert Pollice Research Group · University of Groningen</p>
+        <p>Built data and modeling pipelines for gene-delivery amphiphiles, combining molecular representations, RDKit features, and multi-task neural networks. Trained and evaluated PyTorch models on HPC GPUs.</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>AI Application Deployment on openEuler</h3><span class="date">Jan–Apr 2024</span></div>
+        <p class="meta">Project Leader · openEuler Community / OpenAtom Foundation</p>
+        <p>Packaged PyTorch and its ecosystem as reproducible RPM builds on openEuler. Developed an offline deployment pipeline and Gradio demonstrations for speech synthesis, sentiment analysis, image classification, and image generation.</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>Efficient Fine-Tuning &amp; Prompt Engineering</h3><span class="date">Aug–Oct 2023</span></div>
+        <p class="meta">LoRA · Ascend 910 · Generative AI</p>
+        <p>Created custom image datasets and explored LoRA-based adaptation on Ascend hardware, combining parameter-efficient fine-tuning with prompt engineering for controlled generation.</p>
+      </article>
+    </section>
+
+    <section id="publications" class="section-rule" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <article class="publication">
+        <h3>Investigating Expert-Based Prompt Engineering for Legal Entailment Tasks</h3>
+        <p>Cor Steging, Ludi van Leeuwen, Tadeusz Zbiegień, Dries Wedda, <strong>Junjun Liu</strong></p>
+        <p class="meta">COLIEE 2025 Workshop · Chicago, USA · June 2025</p>
+        <div class="entry-links"><a href="https://www.steging.nl/wp-content/uploads/2025/07/COLIEE2025.pdf">Paper (PDF)</a><a href="https://coliee.org/COLIEE2025/overview#accepted-papers">Workshop</a></div>
+      </article>
+    </section>
+
+    <section id="education" class="section-rule" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <article>
+        <div class="entry-head"><h3>Northeastern University</h3><span class="date">2026–2028 · Expected</span></div>
+        <p>M.S. in Artificial Intelligence · Incoming</p>
+        <p class="meta">Khoury College of Computer Sciences · Machine Learning Concentration</p>
+      </article>
+      <article>
+        <div class="entry-head"><h3>University of Groningen</h3><span class="date">2024–2026 · Expected</span></div>
+        <p>B.Sc. in Artificial Intelligence</p>
+        <p class="meta">Coursework in machine learning, NLP, algorithms, mathematics, statistics, and AI systems.</p>
+      </article>
+    </section>
+
+    <section id="awards" class="section-rule" aria-labelledby="awards-title">
+      <h2 id="awards-title">Honors &amp; Awards</h2>
+      <ul class="awards">
+        <li><time datetime="2025">2025</time><span><strong>1st Place</strong> · AMD Developer Challenge, Distributed Inference Kernels</span></li>
+        <li><time datetime="2025">2025</time><span><strong>National First Prize</strong> · openEuler System Migration Scenario Application Challenge</span></li>
+        <li><time datetime="2024">2024</time><span><strong>Senior Experience Officer, Top 5%</strong> · OpenI Qizhi Community</span></li>
+        <li><time datetime="2023">2023</time><span><strong>Provincial Second Prize</strong> · Blue Bridge Cup, C/C++ Programming</span></li>
+        <li><time datetime="2022">2022</time><span><strong>National Second Prize</strong> · National College English Competition</span></li>
+        <li><time datetime="2021">2021</time><span><strong>National Champion</strong> · WAIC Hackathon, MindSpore Track</span></li>
+      </ul>
+      <h3 class="minor-heading">Mathematical Modeling</h3>
+      <ul class="awards">
+        <li><time datetime="2023">2023</time><span><strong>Finalist</strong> · Mathematical Contest in Modeling (MCM), COMAP</span></li>
+        <li><time datetime="2021">2021</time><span><strong>Provincial First Prize</strong> · National College Student Mathematical Modeling Competition</span></li>
+      </ul>
+      <!-- Add the mathematical modeling paper titles and PDF links when supplied. -->
+    </section>
+    <footer><span>© 2026 Junjun Liu</span><a href="mailto:liu.junju@northeastern.edu">Get in touch</a></footer>
+  </main>
+</body>
+</html>
