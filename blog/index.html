@@ -1,0 +1,22 @@
+---
+layout: blog
+title: Blog
+description: "Learning notes by Junjun Liu (Frank) on AI systems, machine learning, and research papers."
+---
+<p class="intro">Notes on AI systems, machine learning, and the papers I’m reading.</p>
+<section aria-labelledby="posts">
+  <h2 id="posts">Latest posts</h2>
+  {% if site.posts.size > 0 %}
+  <ol class="entries">
+    {% for post in site.posts %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      <h3><a href="{% if post.external_url %}{{ post.external_url | escape }}{% else %}{{ post.url | relative_url }}{% endif %}">{{ post.title | escape }}</a></h3>
+      {% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="empty">No posts published yet.</p>
+  {% endif %}
+</section>

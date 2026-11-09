@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} · Junjun Liu (Frank)</title>
+  {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
+  <style>
+    :root { --ink:#20252b; --muted:#626b75; --blue:#225a91; --line:#e0e5ea; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:white; font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+    .wrap { width:min(880px,calc(100% - 48px)); margin:auto; padding:42px 0 34px; }
+    a { color:var(--blue); text-underline-offset:4px; }
+    a:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
+    .skip { position:absolute; top:-100px; } .skip:focus { top:5px; background:white; }
+    nav { display:flex; align-items:baseline; flex-wrap:wrap; gap:8px 16px; padding-bottom:16px; border-bottom:1px solid var(--line); font-size:15px; }
+    nav a { text-decoration:none; } nav a:hover { text-decoration:underline; }
+    nav .name { font:20px Georgia,serif; color:var(--ink); }
+    nav .divider, nav [aria-current] { color:var(--muted); }
+    main { margin-top:42px; }
+    h1,h2 { font-family:Georgia,"Times New Roman",serif; font-weight:500; letter-spacing:-.025em; }
+    h1 { font-size:clamp(2.45rem,6vw,3.25rem); line-height:1.15; margin:0 0 12px; overflow-wrap:anywhere; }
+    h2 { font-size:1.6rem; line-height:1.35; margin:0 0 14px; }
+    .intro { color:var(--muted); font-size:17px; margin:0; }
+    section { margin-top:40px; }
+    .entries { padding:0; list-style:none; }
+    .entries li { border-top:1px solid var(--line); padding:18px 0; }
+    .entries h3 { font-size:1.15rem; line-height:1.4; margin:3px 0; }
+    .entries p { margin:5px 0 0; }
+    time,.empty,footer { color:var(--muted); }
+    time,footer { font-size:14px; }
+    .prose { max-width:72ch; overflow-wrap:anywhere; }
+    .prose h2,.prose h3 { margin-top:1.5em; }
+    .prose img { max-width:100%; height:auto; }
+    .prose pre { padding:14px; background:#f5f7f9; overflow-x:auto; line-height:1.5; }
+    .prose blockquote { margin-left:0; padding-left:16px; border-left:2px solid var(--line); }
+    footer { border-top:1px solid var(--line); padding-top:18px; margin-top:44px; }
+    @media (max-width:600px) { .wrap { width:calc(100% - 36px); padding-top:28px; } main { margin-top:32px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="skip" href="#main">Skip to content</a>
+    <nav aria-label="Main navigation">
+      <a class="name" href="{{ '/' | relative_url }}">Junjun Liu (Frank)</a>
+      <span class="divider" aria-hidden="true">/</span>
+      {% if page.url == '/blog/' %}<span aria-current="page">Blog</span>{% else %}<a href="{{ '/blog/' | relative_url }}">Blog</a>{% endif %}
+    </nav>
+    <main id="main">
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.collection == 'posts' %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <article class="prose">{{ content }}</article>
+      <p><a href="{{ '/blog/' | relative_url }}">← All posts</a></p>
+      {% else %}{{ content }}{% endif %}
+    </main>
+    <footer>© {{ site.time | date: "%Y" }} Junjun Liu (Frank)</footer>
+  </div>
+</body>
+</html>

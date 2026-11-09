@@ -1,0 +1,8 @@
+permalink: /blog/:year/:month/:day/:title/
+timezone: Asia/Shanghai
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blog
